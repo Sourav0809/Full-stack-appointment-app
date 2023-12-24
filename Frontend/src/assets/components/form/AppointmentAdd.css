@@ -1,0 +1,43 @@
+.appointment-add-form {
+    background-color: rgb(77, 77, 164);
+    width: 800px;
+    margin: auto;
+
+}
+
+.appointment-child-div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.child-div-1,
+.child-div-2,
+.child-div-3 {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+}
+
+label {
+    color: white;
+}
+
+
+
+.form-btn {
+    width: 20%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
