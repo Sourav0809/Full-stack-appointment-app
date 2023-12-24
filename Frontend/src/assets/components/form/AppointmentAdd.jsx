@@ -22,6 +22,7 @@ const AppointmentAdd = () => {
     e.preventDefault();
 
     try {
+      // for editing the appointment
       if (isEditAppointment) {
         const submitedData = {
           id: editAppointment.id,
@@ -36,7 +37,9 @@ const AppointmentAdd = () => {
         );
         console.log(data);
         setNewAppointment(submitedData);
-      } else {
+      }
+      // for adding the appointment
+      else {
         let submitedData = {
           name,
           email,

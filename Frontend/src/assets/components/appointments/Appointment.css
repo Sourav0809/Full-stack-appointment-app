@@ -1,0 +1,33 @@
+.appointment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(102, 102, 183);
+    gap: 10px;
+    color: white;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.appointment-edit-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(21, 38, 105);
+    color: white;
+
+}
+
+.appointment-delete-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(210, 92, 99);
+    color: white;
+}

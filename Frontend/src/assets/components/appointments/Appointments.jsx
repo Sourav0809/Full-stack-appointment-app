@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import mainContext from "../../../context/mainContext";
 import axios from "axios";
+import "./Appointment.css";
 
-const Appointments = ({ val }) => {
+const Appointment = ({ val }) => {
   const { delteAppointment, setEditAppointments, setIsEditAppointment } =
     useContext(mainContext);
 
+  // for delete any appointment
   const deleteAppointmentHandeler = async () => {
     try {
       const { data } = await axios.delete(
@@ -19,6 +21,7 @@ const Appointments = ({ val }) => {
     }
   };
 
+  // for edit any appointment
   const appointmentEditHandeler = () => {
     setEditAppointments({
       name: val.name,
@@ -30,14 +33,30 @@ const Appointments = ({ val }) => {
   };
 
   return (
-    <div>
-      <div>{val.name}</div>
-      <div>{val.email}</div>
-      <div>{val.phone}</div>
-      <button onClick={appointmentEditHandeler}>Edit</button>
-      <button onClick={deleteAppointmentHandeler}>Delete</button>
+    <div className="appointment-container">
+      <div>
+        <h1>{val.name}</h1>
+      </div>
+      <div>
+        <h1>{val.email}</h1>
+      </div>
+      <div>
+        <h1>{val.phone}</h1>
+      </div>
+      <button
+        onClick={appointmentEditHandeler}
+        className="appointment-edit-btn"
+      >
+        Edit
+      </button>
+      <button
+        onClick={deleteAppointmentHandeler}
+        className="appointment-delete-btn"
+      >
+        Delete
+      </button>
     </div>
   );
 };
 
-export default Appointments;
+export default Appointment;

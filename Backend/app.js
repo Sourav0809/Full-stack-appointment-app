@@ -1,12 +1,16 @@
 
 const express = require('express')
 const bodyParser = require("body-parser")
+
+// IMPORTING MIDDLWARES
 const cors = require('cors')
-const db = require('./util/database')
 const appointmentRoutes = require('./routes/appointmentRoutes')
 
-//APP 
+// IMPORTING DATABASE
+const db = require('./util/database')
 
+
+//APP 
 const app = express()
 
 //APPLYING MIDDLEWARES
@@ -16,12 +20,11 @@ app.use(express.json())
 app.use('/user', appointmentRoutes)
 
 // SYNC OUR MODEL 
-
 db.sync().then(() => {
-    console.log("table created")
+    console.log("table sync")
 })
 
-// LISTEN
+// LISTENING
 app.listen(4000, () => {
     console.log('App Running ')
 })

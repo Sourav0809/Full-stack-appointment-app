@@ -1,6 +1,7 @@
 const appointments = require("../models/appointments")
 
 const appointmentsController = {
+    // for fetch the ppointmens 
     getAppointments(req, res) {
         appointments.findAll()
             .then((val) => {
@@ -10,6 +11,7 @@ const appointmentsController = {
     },
 
     addAppointment(req, res) {
+        // for adding the appointment
         const name = req.body.name
         const email = req.body.email
         const phone = req.body.phone
@@ -27,6 +29,7 @@ const appointmentsController = {
     }
     ,
     editAppointment(req, res) {
+        // for editing appointment
         const id = req.body.id
         const name = req.body.name
         const email = req.body.email
@@ -46,6 +49,7 @@ const appointmentsController = {
     },
 
     deleteAppointment(req, res) {
+        // for deleting the appointments
         const id = req.body.id
         appointments.findAll({ where: { id: id } })
             .then((appointment) => {

@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import Appointments from "./Appointments";
+import Appointment from "./Appointments";
 import mainContext from "../../../context/mainContext";
-
+import "./AllAppointments.css";
 const AllAppointment = () => {
   const { appointments } = useContext(mainContext);
   console.log(appointments);
   return (
-    <div>
+    <div className="all-appoinments-container">
       {appointments &&
         appointments.map((val) => {
-          return <Appointments val={val} key={val.id} />;
+          return <Appointment val={val} key={val.id} />;
         })}
     </div>
   );

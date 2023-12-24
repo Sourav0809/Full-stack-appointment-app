@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../util/database')
 
+// APPOINTMENT TABLE 
 const appointments = sequelize.define('appointments', {
     id: {
         type: Sequelize.INTEGER,

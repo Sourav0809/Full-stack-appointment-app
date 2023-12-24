@@ -5,6 +5,7 @@ const ContextProvider = (props) => {
   const [editAppointment, setEditAppointment] = useState({});
   const [isEditAppointment, setIsEditAppointment] = useState(false);
 
+  // when user add some appointment
   const appointmentSetHandeler = (data) => {
     if (isEditAppointment) {
       const findIndex = appointments.findIndex(
@@ -27,12 +28,14 @@ const ContextProvider = (props) => {
     }
   };
 
+  // for delete appointment
   const deleteAppointementHandeler = (id) => {
     setAppointments((prev) => {
       return prev.filter((val) => val.id !== id);
     });
   };
 
+  // provider values
   const providerValues = {
     appointments: appointments,
     setAppointments: setAppointments,
